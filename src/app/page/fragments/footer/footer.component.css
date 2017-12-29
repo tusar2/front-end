@@ -1,0 +1,7 @@
+footer#foot {
+    background-color: #2f515b;
+    padding: 14px 0;
+}
+section.bottomfooter * {
+    color: #FFF;
+}

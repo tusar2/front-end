@@ -1,0 +1,21 @@
+
+<div class="row" style="margin-top: 40px;margin-bottom: 40px;">
+    <div class="col-md-12">
+        <app-google-map></app-google-map>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-5">
+        <app-spider-chart *ngIf="spiderData" [data]="spiderData.dataCollection"></app-spider-chart>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <app-bar-chart *ngIf="barChartData" [data]="barChartData.dataCollection"></app-bar-chart>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <app-line-chart *ngIf="lineChartData" [data]="lineChartData"></app-line-chart>
+    </div>
+</div>
