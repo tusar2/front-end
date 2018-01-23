@@ -305,17 +305,18 @@ export class SpiderChartComponent implements OnInit, OnChanges {
     function showPopover(d) {
       $(this).popover({
         title : '',
-        placement : 'auto top',
+        placement : 'top',
         container : 'body',
         trigger : 'manual',
         html : true,
+        animation: false,
         content : function() {
           return "<div style='color: #257ab6;'>" + d.axis + "</div>" + "Score : " + d.value + "%";
         }
       });
       $(this).popover('show');
       $("body").addClass("popoverOpened");
-      $('.popover.fade.top.in').css('top', parseFloat($('.popover.fade.top.in').css('top').slice(0, -2))+$(window).scrollTop());
+      // $('.popover.fade.top.in').css('top', parseFloat($('.popover.fade.top.in').css('top').slice(0, -2))+$(window).scrollTop());
     }
   
   }

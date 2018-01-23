@@ -1,39 +1,45 @@
-<nav class="navbar nav-menu-container">
-	<button class="navbar-toggle custom-navbar-mobile" style="z-index: 777"
-		data-toggle="collapse" data-target=".navHeaderCollapse2">
-		<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-			class="icon-bar"></span>
-	</button>
-	<div class="container">
-		<div class="row">
-		<div class="col-md-4 navbar-header">
-			<div class="logoresize">
-				<div class="heading_partDesktop heading_part">
-					<h2 class="headerinfo">
-						SDRC Repo<span
-							style="font-size: 12px; color: #79bdf8;">&nbsp; 1.0.0</span>
-					</h2>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3 user-welcome text-right">
-				<h5>
-					Welcome<span>&nbsp; SDRCian</span>
-				</h5>
 
-			</div>
-			<div
-			class="col-md-5 collapse navbar-collapse navHeaderCollapse2">
-			<ul class="nav navbar-nav navbar-right nav-submenu nav-place-right">
-				
-				<li class="active"><a routerLink="">Home</a></li>
-				<li><a routerLink="dashboard">Dashboard</a></li>
-				<!-- <li><a routerLink="contact">Contact</a></li>
-				<li><a routerLink="logout">Logout</a></li> -->
-				
-			</ul>
-		</div>
-	</div>
-	</div>
-</nav>
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-sm navbar-toggleable-md navbar-dark custom-nav fixed-top scrolling-navbar">
+           
+    <!-- Navbar brand -->
+    <logo><a class="navbar-brand" href="#">SDRC Repo <small>1.0.0</small></a></logo>
 
+    <!-- Collapsible content -->
+    <links>
+
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" [ngClass]="{'active': router.url=='/' || router.url=='/login'}">
+                <a class="nav-link" mdbRippleRadius routerLink="/">Home</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'active': router.url=='/dashboard'}">
+                <a class="nav-link" mdbRippleRadius routerLink="dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'active': router.url=='/form'}">
+                <a class="nav-link" mdbRippleRadius routerLink="form">Form</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'active': router.url=='/basic-components'}">
+                <a class="nav-link" mdbRippleRadius routerLink="basic-components">Basic Components</a>
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbRippleRadius class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+                Basic dropdown<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbRippleRadius routerLink="/">Home</a>
+                    <a class="dropdown-item waves-light" mdbRippleRadius routerLink="dashboard">Dashboard</a>
+                    <a class="dropdown-item waves-light" mdbRippleRadius routerLink="form">Form</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbRippleRadius href="#">Separated link</a>
+                </div>
+            </li>
+
+        </ul>
+        <!-- Links -->
+
+    </links>
+    <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->

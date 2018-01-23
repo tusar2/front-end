@@ -240,10 +240,11 @@ export class BarChartComponent implements OnInit {
       $(this).popover(
           {
             title : '',
-            placement : 'auto top',
+            placement : 'top',
             container : 'body',
             trigger : 'manual',
             html : true,
+            animation: false,
             content : function() {
               if(d.axis != "")
               return "<div style='color: #257ab6;'>" + d.axis + "</div>" + "Score : "
@@ -253,7 +254,7 @@ export class BarChartComponent implements OnInit {
             }
           });
       $(this).popover('show');
-      $('.popover.fade.top.in').css('top', parseFloat($('.popover.fade.top.in').css('top').slice(0, -2)) + $(window).scrollTop() - 15);
+      // $('.popover.fade.top.in').css('top', parseFloat($('.popover.fade.top.in').css('top').slice(0, -2)) + $(window).scrollTop() - 15);
     }
     
     //NEW CODE FOR DATA VALUE TEXT ON EACH BAR-----------------

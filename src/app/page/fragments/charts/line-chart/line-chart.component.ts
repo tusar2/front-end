@@ -414,10 +414,11 @@ export class LineChartComponent implements OnInit, OnChanges {
 						$(this).popover(
 								{
 									title : '',
-									placement : 'auto top',
+									placement : 'top',
 									container : 'body',
 									trigger : 'manual',
 									html : true,
+									animation: false,
 									content : function() {
 										return d.key == "P-Average" ? "P-Average: <span class='navy-text'>"+d.value : "</span>Time Period: <span class='navy-text'>" + d.date
 												+ "</span><br/>"+ (d.key == "CL" ? "Fractional Index" : d.key)+": <span class='navy-text'>"
@@ -425,7 +426,7 @@ export class LineChartComponent implements OnInit, OnChanges {
 									}
 								});
 						$(this).popover('show');
-						$('.popover.fade.top.in').css('top', parseFloat($('.popover.fade.top.in').css('top').slice(0, -2)) + $(window).scrollTop());
+						// $('.popover.fade.top.in').css('top', parseFloat($('.popover.fade.top.in').css('top').slice(0, -2)) + $(window).scrollTop());
 					}
 					/*//Draw a horizontal line for overall score of latest time period
 					svg.append("g").attr("class", "y axis").call(yAxis).append("line")          // attach a line

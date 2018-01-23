@@ -1,19 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HeaderComponent } from './header.component';
 
-describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+import { SdrcTableComponent } from './sdrc-table.component';
+
+describe('SdrcTableComponent', () => {
+  let component: SdrcTableComponent;
+  let fixture: ComponentFixture<SdrcTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [ SdrcTableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderComponent);
+    fixture = TestBed.createComponent(SdrcTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
