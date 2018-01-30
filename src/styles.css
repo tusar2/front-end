@@ -813,4 +813,7 @@ input[type="radio"] {
    input[type=range]:focus::-ms-fill-upper {
      background: #ccc;
    }
+   .carousel-inner {
+    margin-bottom: 18px;
+}
    
