@@ -11,56 +11,56 @@ export class FormFieldsService {
 
     let questions:FormModel<any>[] = [  
       {  
-         "value":"Solid",
-         "key":"Solid",
+         "value":"Odisha",
+         "key":"odisha",
          "label":"Select state",
          "required":false,
          "controlType":"dropdown",
          "options":[  
             {  
-               "key":"solid",
-               "value":"Solid"
+               "key":"odisha",
+               "value":"Odisha"
             },
             {  
-               "key":"great",
-               "value":"Great"
+               "key":"bihar",
+               "value":"Bihar"
             },
             {  
-               "key":"good",
-               "value":"Good"
+               "key":"karnataka",
+               "value":"Karnataka"
             },
             {  
-               "key":"unproven",
-               "value":"Unproven"
+               "key":"westBengal",
+               "value":"West Bengal"
             }
          ]
       },
       {  
          "key":"brave",
-         "label":"Bravery Rating",
+         "label":"Bravery City",
          "required":false,
          "controlType":"dropdown",
          "options":[  
             {  
-               "key":"solid",
-               "value":"Solid"
+               "key":"bbsr",
+               "value":"Bhubaneswar"
             },
             {  
-               "key":"great",
-               "value":"Great"
+               "key":"patna",
+               "value":"Patna"
             },
             {  
-               "key":"good",
-               "value":"Good"
+               "key":"bengaluru",
+               "value":"Bengaluru"
             },
             {  
-               "key":"unproven",
-               "value":"Unproven"
+               "key":"kolkata",
+               "value":"Kolkata"
             }
          ]
       },
       {  
-         "value":"Bombasto",
+         "value":"Swarna",
          "key":"firstName",
          "label":"First name",
          "required":true,
@@ -68,6 +68,7 @@ export class FormFieldsService {
          "type":"text"
       },
       {  
+         "value":"swarnaprava@sdrc.co.in",
          "key":"emailAddress",
          "label":"Email",
          "required":false,

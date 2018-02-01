@@ -33,6 +33,15 @@
    
   }
   
-  
+  .dynamicForm-heading
+  {
+    text-align: center;
+    padding: 12px;
+    background: #4CAF50;
+    color: #fff;
+    font-family: cursive;
+    border-radius: 4px;
+    box-shadow: 5px 0px 14px grey;
+  }
   
     
