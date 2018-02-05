@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
+
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { HeaderComponent } from './page/fragments/header/header.component';
@@ -35,6 +36,9 @@ import { FormControlService } from './service/form-control.service';
 import { DynamicFormComponent } from './page/fragments/allUIComponents/dynamic-form/dynamic-form.component';
 import { FormFieldsService } from './service/form-fields.service';
 import { DynamicFormFieldsComponent } from './page/fragments/allUIComponents/dynamic-form-fields/dynamic-form-fields.component';
+import { ReportComponent } from './page/report/report.component';
+
+
 
 const appRoutes: Routes = [
   {
@@ -55,6 +59,11 @@ const appRoutes: Routes = [
   {
     path: 'basic-components',
     component: BasicComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'report',
+    component: ReportComponent,
     pathMatch: 'full'
   }
 
@@ -81,7 +90,9 @@ const appRoutes: Routes = [
     SdrcTableComponent,
     RemoveElementPipe,
     DynamicFormComponent,
-    DynamicFormFieldsComponent
+    DynamicFormFieldsComponent,
+    ReportComponent
+  
   ],
   imports: [
     AgmCoreModule.forRoot({

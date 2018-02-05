@@ -1,0 +1,113 @@
+
+
+.margin-top
+{
+    margin-top: 40px;
+}
+
+.dropdown-menu
+{
+    width: 100%;
+}
+
+.report-2018
+{
+    color: rgb(48, 128, 48);
+    padding: 20px;
+}
+
+.mandatory_star
+{
+    color: rgb(212, 16, 16);
+    font-weight: bold;
+}
+
+.btn-dropList
+{
+    padding: 12px !important;
+    margin-top: 1px;
+    height: 33px;
+    box-shadow: none !important;
+    background: #243a51;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search-md], input[type=search], textarea.md-textarea {
+    border: 1px solid #CCCC;
+    border-bottom: 1px solid #CCCC;
+    box-sizing: border-box;
+    height: 33px;
+    font-size: 15px;
+    margin-bottom: 0;
+    top: -2px;
+}
+
+.reportYear-dropdown
+{
+    border-radius: 0;
+    float: left;
+    left: -125px !important;
+}
+
+.paddingLeft-list a
+{
+    padding-left: 10px;
+}
+.padding-zero
+{
+    padding: 0;
+}
+
+.leave-remark-heading
+{
+    margin: 0;
+    padding: 9px;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.leave-remark-area
+{
+	height: 37px;
+    background:#243a51;
+    color: #fff;
+}
+
+#upload-file-selector {
+    display:none;   
+}
+#upload-file-selector-utilization {
+    display:none;   
+}
+
+.remarks-box
+{
+	resize: none;
+	border-radius: 0;
+	height: 136px !important;
+    border: 1px solid #009688 ;
+    margin: 0;
+}
+
+.upload-file
+{
+    width: 100%;
+    background: #243a51;
+}
+
+.submit-btn
+{
+   background:  #243a51;
+}
+thead {
+    background: #243a51;
+    color: #fff;
+}
+
+table tbody td, table thead th {
+    
+    text-align: center;
+}
+
+.table {
+    border: 1px solid #d4cdcd36;
+}

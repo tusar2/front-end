@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, AfterViewChecked, AfterViewInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormControl, FormGroup } from '@angular/forms';
 import { FormModel } from '../../../../interface/form.model';
 import { FormControlService } from '../../../../service/form-control.service';
 declare var $: any;
@@ -16,15 +16,21 @@ export class DynamicFormComponent implements OnInit {
   form: FormGroup;
   payLoad = '';
 
-  constructor(private formControlService: FormControlService) { }
-
+  constructor(private formControlService: FormControlService, private fb : FormBuilder)
+   {
+     this.submitForm();
+    }
+    
   ngOnInit() {
     this.form = this.formControlService.toFormGroup(this.formFields);
   }
   
   submitForm(){
     console.log(this.formFields);
+    
+    
   }
+  
 
   selectDropdown(selectedOption, model, index){
     this.formFields[index].key = selectedOption.value;

@@ -36,8 +36,8 @@ export class FormFieldsService {
          ]
       },
       {  
-         "key":"brave",
-         "label":"Bravery City",
+         "key":"city",
+         "label":"Select City",
          "required":false,
          "controlType":"dropdown",
          "options":[  
@@ -109,7 +109,41 @@ export class FormFieldsService {
        "required":false,
        "controlType":"textarea",
        "type":"textarea"
-    }
+    },
+    {  
+      "value":"Skill",
+      "key":"skill",
+      "label":"Select Skill",
+      "required":false,
+      "controlType":"dropdown",
+      "options":[  
+         {  
+            "key":"html",
+            "value":"HTML5"
+         },
+         {  
+            "key":"css",
+            "value":"CSS 3"
+         },
+         {  
+            "key":"bootstrap",
+            "value":"Bootstrap 4"
+         },
+         {  
+          "key":"javascript",
+          "value":"javaScript"
+         },
+         {  
+          "key":"jquery",
+          "value":"jQuery"
+         },
+         {  
+            "key":"angular",
+            "value":"Angular 5"
+         }
+         
+      ]
+   }
    ]
     return questions;
   }

@@ -1,0 +1,256 @@
+
+
+<div class="container">
+  <div class="row">
+    <h3 class="report-2018 text-center">Reports</h3>
+    </div>
+
+
+  <!--section for financial year -->
+    <div class="row">   
+        <div class="col-md-6 padding-zero">
+            <div class="form-group">
+                <label class="name col-md-4 float-left">Financial Year :</label>
+                <div class="form-group col-md-8 select-container  text-center float-left">
+                    <div class="input-group" style="margin: auto;">
+                      <input type="text" id="report-type"
+                        class="form-control not-visible-input" name="report-type"
+                        readonly="" ng-model="reportyearName" placeholder="Select Year">
+                      <div class="input-group-btn" style="position: relative;">
+                        <button data-toggle="dropdown"
+                          class="btn btn-color dropdown-toggle btn-dropList" type="button">
+                          <span class="glyphicon glyphicon-menu-down"></span>
+                        </button> 
+                        <ul class="dropdown-menu reportYear-dropdown" role="menu">
+                          <li class="paddingLeft-list"
+                            ><a href="">a</a></li>
+                            <li  class="paddingLeft-list"
+                            ><a href="">a</a></li>
+                            <li class="paddingLeft-list"
+                            ><a href="">a</a></li>
+                            <li class="paddingLeft-list"
+                            ><a href="">a</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">   
+        <div class="col-md-12 padding-zero">
+            <div class="col-md-6 padding-zero float-left">
+                <div class="form-group">
+                    <label class="name col-md-4 float-left">Select report type :</label>
+                    <div class="form-group col-md-8 select-container  text-center float-left">
+                        <div class="input-group" style="margin: auto;">
+                          <input type="text" id="report-typeDetails"
+                            class="form-control not-visible-input" name="report-type"
+                            readonly="" ng-model="reportName" placeholder="Select report">
+                          <div class="input-group-btn" style="position: relative;">
+                            <button data-toggle="dropdown"
+                              class="btn btn-color dropdown-toggle btn-dropList" type="button">
+                              <span class="glyphicon glyphicon-menu-down"></span>
+                            </button> 
+                            <ul class="dropdown-menu reportYear-dropdown" role="menu">
+                              <li class="paddingLeft-list"
+                                ><a href="">a</a></li>
+                                <li  class="paddingLeft-list"
+                                ><a href="">a</a></li>
+                                <li class="paddingLeft-list"
+                                ><a href="">a</a></li>
+                                <li class="paddingLeft-list"
+                                ><a href="">a</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+      
+              <div class="form-group col-md-12 padding-zero">
+                  <div class="form-group">
+                      <label class="name col-md-4 float-left">Month :</label>
+                      <div class="form-group col-md-8 select-container  text-center float-left">
+                          <div class="input-group" style="margin: auto;">
+                            <input type="text" id="report-month"
+                              class="form-control not-visible-input" name="report-type"
+                              readonly="" ng-model="reportMonth" placeholder="Select month">
+                            <div class="input-group-btn" style="position: relative;">
+                              <button data-toggle="dropdown"
+                                class="btn btn-color dropdown-toggle btn-dropList" type="button">
+                                <span class="glyphicon glyphicon-menu-down"></span>
+                              </button> 
+                              <ul class="dropdown-menu reportYear-dropdown" role="menu">
+                                <li class="paddingLeft-list"
+                                  ><a href="">a</a></li>
+                                  <li  class="paddingLeft-list"
+                                  ><a href="">a</a></li>
+                                  <li class="paddingLeft-list"
+                                  ><a href="">a</a></li>
+                                  <li class="paddingLeft-list"
+                                  ><a href="">a</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+              
+              
+              <div class="form-group col-md-6 col-xs-12 col-sm-6 float-left ">
+                <div class="form-group">
+                   <label class="btn btn-default upload-file" for="upload-file-selector">
+                     <input id="upload-file-selector" type="file" ng-model="selecteduploadReport" name="uploadReport"
+                        onchange="angular.element(this).scope().getReportDetails(this)" accept=".pdf" > 
+                      <span class="glyphicon glyphicon-open upload-icon upload-report"></span> REPORT
+                  </label>
+                  <p class="suucessmsg" id="msg"></p>
+                  <p class="error-msg" id="msgError"></p>
+                </div>
+              </div>
+              
+              <div class="form-group col-md-6 col-xs-12 col-sm-6 float-right ">
+                <div class="form-group">
+                   <label class="btn btn-default upload-file"
+                    for="upload-file-selector-utilization"> <input ng-model="selecteduploadUtilizationReport" name="uploadUtilizationReport"
+                        onchange="angular.element(this).scope().getutilizationReportDetails(this)"
+                      id="upload-file-selector-utilization" type="file" accept=".pdf"> 
+                      <span class="glyphicon glyphicon-open upload-icon upload-report"></span> UTILIZATION CERTIFICATE
+                  </label>
+                  <p class="suucessmsg" id="msg1"></p>
+                  <p class="error-msg" id="msgError1"></p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-6 float-right">
+              <div class="select-container ">
+                <div class="leave-remark-area">
+                  <h4 class="leave-remark-heading">Leave a remark</h4>
+                </div>
+                <textarea type="text" id="remark" maxlength="250"
+                  class="form-control not-visible-input remarks-box" name="remark"
+                  ng-model="remarks"> </textarea>
+              </div>
+              <div class="float-right"><b></b> 
+                 characters left</div>
+            </div>
+          </div>
+    </div>
+
+    <div class="row">
+            <div class="col-md-12 padding-zero">
+              <div class="form-group col-md-12">
+                <div class="form-group col-md-3 padding-zero">
+                  <button type="submit" 
+                    class="btn btn-lg btn-primary btn-block submit-btn" value="SUBMIT">SUBMIT</button>
+                </div>
+              </div>
+            </div>
+    </div>
+
+    <div class="row">
+            <div class="col-md-12 padding-zero">
+                <h3 class="report-2018">History</h3>
+            </div>
+      </div>
+
+      <div class="row">   
+          <div class="col-md-8 padding-zero">
+              <div class="form-group">
+                  <label class="name col-md-3 float-left">Financial Year :</label>
+                  <div class="form-group col-md-4 select-container  text-center float-left">
+                      <div class="input-group" style="margin: auto;">
+                        <input type="text" id="report-type"
+                          class="form-control not-visible-input" name="report-type"
+                          readonly="" ng-model="reportyearName" placeholder="Select Year">
+                        <div class="input-group-btn" style="position: relative;">
+                          <button data-toggle="dropdown"
+                            class="btn btn-color dropdown-toggle btn-dropList" type="button">
+                            <span class="glyphicon glyphicon-menu-down"></span>
+                          </button> 
+                          <ul class="dropdown-menu reportYear-dropdown" role="menu">
+                            <li class="paddingLeft-list"
+                              ><a href="">a</a></li>
+                              <li  class="paddingLeft-list"
+                              ><a href="">a</a></li>
+                              <li class="paddingLeft-list"
+                              ><a href="">a</a></li>
+                              <li class="paddingLeft-list"
+                              ><a href="">a</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+          </div>
+     
+      </div>
+  
+
+      <div class="row">
+                                             
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Sl. No.</th>
+        <th>Report Type</th>
+        <th>Month</th>
+        <th>Download Report</th>
+        <th>Remarks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td >2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td >3</td>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+        <td>@mdo</td>
+      </tr>
+
+      <tr>
+          <td >3</td>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+          <td>@mdo</td>
+        </tr>
+
+        <tr>
+            <td >3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>@mdo</td>
+          </tr>
+
+          <tr>
+              <td >3</td>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+              <td>@mdo</td>
+            </tr>
+    </tbody>
+  </table>
+        </div>
+
+
+  </div>

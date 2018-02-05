@@ -23,6 +23,7 @@
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
           "../node_modules/angular-bootstrap-md/scss/mdb-free.scss",
         "../node_modules/snazzy-info-window/dist/snazzy-info-window.css",
+        "../node_modules/font-awesome/css/font-awesome.css",
         "styles.css"
       ],
       "scripts": [
