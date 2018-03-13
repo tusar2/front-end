@@ -1,3 +1,4 @@
+import { ReportFieldsService } from './service/report-fields.service';
 import { AuthGuard } from './guard/auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
@@ -111,7 +112,7 @@ const appRoutes: Routes = [
     MDBBootstrapModule.forRoot()
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [UserService, AuthGuard, DataService, User, HttpClientModule, FormControlService, FormFieldsService],
+  providers: [UserService, AuthGuard, DataService, User, HttpClientModule, FormControlService, FormFieldsService, ReportFieldsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

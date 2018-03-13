@@ -9,26 +9,20 @@
   <!--section for financial year -->
     <div class="row">   
         <div class="col-md-6 padding-zero">
-            <div class="form-group">
+            <div class="form-group" >
                 <label class="name col-md-4 float-left">Financial Year :</label>
                 <div class="form-group col-md-8 select-container  text-center float-left">
                     <div class="input-group" style="margin: auto;">
                       <input type="text" id="report-type"
                         class="form-control not-visible-input" name="report-type"
-                        readonly="" ng-model="reportyearName" placeholder="Select Year">
+                        readonly="" [(ng-model)]="value" placeholder="Select Year">
                       <div class="input-group-btn" style="position: relative;">
                         <button data-toggle="dropdown"
                           class="btn btn-color dropdown-toggle btn-dropList" type="button">
                           <span class="glyphicon glyphicon-menu-down"></span>
                         </button> 
                         <ul class="dropdown-menu reportYear-dropdown" role="menu">
-                          <li class="paddingLeft-list"
-                            ><a href="">a</a></li>
-                            <li  class="paddingLeft-list"
-                            ><a href="">a</a></li>
-                            <li class="paddingLeft-list"
-                            ><a href="">a</a></li>
-                            <li class="paddingLeft-list"
+                          <li *ngFor="let report of reports" class="paddingLeft-list"
                             ><a href="">a</a></li>
                         </ul>
                       </div>
@@ -144,7 +138,7 @@
             <div class="col-md-12 padding-zero">
               <div class="form-group col-md-12">
                 <div class="form-group col-md-3 padding-zero">
-                  <button type="submit" 
+                  <button type="submit" (click)="submitForm()"
                     class="btn btn-lg btn-primary btn-block submit-btn" value="SUBMIT">SUBMIT</button>
                 </div>
               </div>
@@ -254,3 +248,18 @@
 
 
   </div>
+
+
+
+  <div id="errorMessage" class="confrirmation-modal modal fade" role="dialog" data-backdrop="static" data-keyboard="false" tabindex="-1">
+		<div class="modal-dialog">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-body text-center">
+					<div class="errorhead"><img alt="" src="resources/images/icons/Messages_warning_caution_icon.svg" style="width: 25px;margin-top: -5px;">&nbsp; ERROR</div>
+					<div class="errorbody padding-errorbody">{{validationMsg}}</div>
+					<button type="button" class="btn errorOk" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
